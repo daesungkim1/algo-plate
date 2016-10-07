@@ -1,0 +1,128 @@
+{
+  "tc-size" : 4,
+  "test-size" : 3,
+  "name" : "binarySearch",
+  "testcases" : {
+      "tc1" : {
+        "size" : 10,
+        "case" : [1,2,3,5,6,8,9,11,14,15]
+      },
+      "tc2" : {
+        "size" : 5,
+        "case" : [1,2,3,5,7]
+      },
+      "tc3" : {
+        "size" : 14,
+        "case" : [1,2,3,5,6,8,9,11,14,15,21,32,24,54]
+      },
+      "tc4" : {
+        "size" : 14,
+        "case" : [1,2,3,5,6,8,9,11,14,15,21,32,24,54]
+      },
+      "tc5" : {
+        "size" : 14,
+        "case" : [1,2,3,3,3,3,7,8,9,12,12,12,13]
+      }
+  },
+  "tests" : [
+    {
+      "type" : "match",
+      "size" : 6,
+      "results" : [
+        {
+          "ref" : "tc1",
+          "input" : 9,
+          "expected" : 7
+        },
+        {
+          "ref" : "tc1",
+          "input" : 1,
+          "expected" : 1
+        },
+        {
+          "ref" : "tc5",
+          "input" : 13,
+          "expected" : 13
+        },
+        {
+          "ref" : "tc2",
+          "input" : 3,
+          "expected" : 3
+        },
+        {
+          "ref" : "tc3",
+          "input" : 11,
+          "expected" : 8
+        },
+        {
+          "ref" : "tc4",
+          "input" : 10,
+          "expected" : -1
+        }
+      ]
+    },
+    {
+      "type" : "lower-bound",
+      "size" : 4,
+      "results" : [
+        {
+          "ref" : "tc1",
+          "input" : 9,
+          "expected" : 7
+        },
+        {
+          "ref" : "tc2",
+          "input" : 3,
+          "expected" : 3
+        },
+        {
+          "ref" : "tc3",
+          "input" : 11,
+          "expected" : 8
+        },
+        {
+          "ref" : "tc4",
+          "input" : 10,
+          "expected" : 8
+        }
+      ]
+    },
+    {
+      "type" : "upper-bound",
+      "size" : 6,
+      "results" : [
+        {
+          "ref" : "tc1",
+          "input" : 7,
+          "expected" : 6
+        },
+        {
+          "ref" : "tc2",
+          "input" : 8,
+          "expected" : 6
+        },
+        {
+          "ref" : "tc3",
+          "input" : 6,
+          "expected" : 6
+        },
+        {
+          "ref" : "tc4",
+          "input" : 20,
+          "expected" : 11
+        },
+        {
+          "ref" : "tc5",
+          "input" : 4,
+          "expected" : 7
+        },
+        {
+          "ref" : "tc5",
+          "input" : 3,
+          "expected" : 7
+        }
+
+      ]
+    }
+  ]
+}
